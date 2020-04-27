@@ -10,6 +10,15 @@ function App() {
       <h2>You clicked {count} times!</h2>
       <button onClick={() => setCount(count - 1)}>-</button>
       <button onClick={() => setCount(count + 1)}>+</button>
+      <div>
+        <label for="count">First count</label>
+        <input 
+          type="number" 
+          id="count" 
+          name="count"
+          onChange={event=> setCount(Number(event.target.value))}
+        />
+      </div>
     </div>
   );
 }
